@@ -108,9 +108,9 @@
              <br />
              <asp:Label ID="Label11" runat="server" Text="Τρόπος πληρωμής:" style="font-weight: 700"></asp:Label>
              <br />
-             <input type="radio" name="money" value="Αντικαταβολή"> Αντικαταβολή<br>
-                <input type="radio" name="money" value="Κατάθεση"> Κατάθεση<br>
-                <input type="radio" name="money" value="Πιστωτική κάρτα"> Πιστωτική κάρτα
+             <input type="radio" name="money" value="Αντικαταβολή"/> Αντικαταβολή<br/>
+                <input type="radio" name="money" value="Κατάθεση"/> Κατάθεση<br/>
+                <input type="radio" name="money" value="Πιστωτική κάρτα"/> Πιστωτική κάρτα
              </div>
                 
               
@@ -126,7 +126,7 @@
                 <input type="range" min="1" max="100" value="50"/>
                 Δύσκολη&nbsp;
              </div>
-            <asp:Button ID="Button1" runat="server" Text="Επαναφορά" />&nbsp;<asp:Button ID="Button2" runat="server" Text="Υποβολή" />
+            <asp:Button ID="Button1" runat="server" Text="Επαναφορά" OnClick='myFunction()' />&nbsp;<asp:Button ID="Button2" runat="server" Text="Υποβολή" />
 
     
             <br />
@@ -138,6 +138,12 @@
     
     </div>
     </form>
+
+    <script>
+        function myFunction() {
+         document.getElementById("form1").reset();
+        }
+    </script>
     
 </body>
 </html>
